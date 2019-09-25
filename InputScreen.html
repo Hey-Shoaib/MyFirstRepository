@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+ <div class="login">
+	<h1>Enter Parameter values</h1>
+     <!-- Main Input For Receiving Query to our ML -->
+    <form action="{{ url_for('predict')}}"method="post">
+    	<input type="text" name="1" placeholder="Gender(0-1)" required="required" />
+        <input type="text" name="2" placeholder="Age( # of Days)" required="required" />
+		<input type="text" name="3" placeholder="Hemoglobin" required="required" />
+        <input type="text" name="4" placeholder="HCT" required="required" />
+        <input type="text" name="5" placeholder="MCHC" required="required" />
+        <input type="text" name="6" placeholder="Platelet" required="required" />
+        <input type="text" name="7" placeholder="Red Cells Count(RBC)" required="required" />
+        <input type="text" name="8" placeholder="MCH" required="required" />
+        <input type="text" name="9" placeholder="MCV" required="required" />
+        <input type="text" name="10" placeholder="WBC" required="required" />
+        <br>
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+   <br>
+   <br>
+   {{ prediction }}
+ </div>
+</body>
+</html>
